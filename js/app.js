@@ -27,7 +27,9 @@ let currentPlayer = player1;
 
 // Define game object to hold the logic of the game
 const Game = (function(){
+  // Add function to start play game each move
   const playGame = function (){
+    // Add function to check if there is a winner each move
     const checkForWin = function (){
       if(GameBoard.boardArr[0] === currentPlayer.mark &&
          GameBoard.boardArr[1] === currentPlayer.mark &&
@@ -72,14 +74,14 @@ const Game = (function(){
            return false;
         }
     };
-
+    // Add function to check if the game is finished and no one is the winner
     const checkForTie = function (){
       if(gameComponents.getMoves() === 9){
         return true;
       }
       return false;
     };
-
+    // Add function to put mark in specified location each move
     const addMarker = function (index){
       if(this.textContent === "" && !checkForWin()){
         this.textContent = currentPlayer.mark;
@@ -107,4 +109,12 @@ const Game = (function(){
     }
   };  
   return {playGame};
+})();
+
+const buttonsObj = (function(){
+  const playerX = document.querySelector("#x");
+  const playerO = document.querySelector("#o");
+  const start = document.querySelector("#start");
+  const restart = document.querySelector("#restart");
+  return {playerX, playerO, start, restart};
 })();
