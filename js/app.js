@@ -118,3 +118,11 @@ const buttonsObj = (function(){
   const restart = document.querySelector("#restart");
   return {playerX, playerO, start, restart};
 })();
+
+const switchPlayer = function (player1, player2) {
+  currentPlayer = this;
+  player1.classList.add("selected-player");
+  player2.classList.remove("selected-player");
+};
+buttonsObj.playerX.addEventListener("click", switchPlayer.bind(player1, buttonsObj.playerX, buttonsObj.playerO));
+buttonsObj.playerO.addEventListener("click", switchPlayer.bind(player2, buttonsObj.playerO, buttonsObj.playerX)); 
