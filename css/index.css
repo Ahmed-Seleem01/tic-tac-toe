@@ -25,3 +25,13 @@ body {
   font-size: 4rem;
   font-weight: 700;
 }
+
+.mark{
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
