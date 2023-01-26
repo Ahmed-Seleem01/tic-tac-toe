@@ -10,3 +10,8 @@ const gameComponents = (function () {
   };
   return {board, moves, result, getMoves, movesIncrement};
 })();
+
+const GameBoard = (()=>{
+  const boardArr = ["", "", "", "", "", "", "", "", ""];
+  return {boardArr};
+})();
