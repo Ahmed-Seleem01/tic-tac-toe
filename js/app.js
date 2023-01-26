@@ -15,3 +15,12 @@ const GameBoard = (()=>{
   const boardArr = ["", "", "", "", "", "", "", "", ""];
   return {boardArr};
 })();
+
+const Players = (name, mark, color) => {
+  return {name, mark, color};
+};
+
+const player1 = Players("Player X", "X", "red");
+const player2 = Players("Player O", "O", "blue");
+
+let currentPlayer = player1;
