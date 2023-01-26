@@ -2,3 +2,13 @@ body {
   position: relative;
   text-align: center;
 }
+
+.board{
+  border: 1px solid black;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  width: 600px;
+  height: 450px;
+  margin: 50px auto;
+  text-align: center;
+}
