@@ -126,3 +126,26 @@ const switchPlayer = function (player1, player2) {
 };
 buttonsObj.playerX.addEventListener("click", switchPlayer.bind(player1, buttonsObj.playerX, buttonsObj.playerO));
 buttonsObj.playerO.addEventListener("click", switchPlayer.bind(player2, buttonsObj.playerO, buttonsObj.playerX)); 
+
+buttonsObj.start.addEventListener("click", () => {
+  Game.playGame();
+  buttonsObj.playerX.disabled = true;
+  buttonsObj.playerO.disabled = true;
+});
+
+buttonsObj.restart.addEventListener("click", () => {
+  const squares = document.querySelectorAll(".mark");
+  squares.forEach((square, index) => {
+    square.textContent = "";
+    GameBoard.boardArr[index] = "";
+  });
+  currentPlayer = player1;
+  gameComponents.moves = 0;
+  gameComponents.result.textContent = "";
+  gameComponents.board.textContent = "";
+  gameComponents.result.classList.remove("result");
+  buttonsObj.playerX.classList.remove("selected-player");
+  buttonsObj.playerO.classList.remove("selected-player");
+  buttonsObj.playerX.disabled = false;
+  buttonsObj.playerO.disabled = false;
+});
