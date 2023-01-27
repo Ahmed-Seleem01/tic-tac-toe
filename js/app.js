@@ -174,4 +174,5 @@ buttonsObj.restart.addEventListener("click", () => {
   buttonsObj.playerO.classList.remove("selected-player");
   buttonsObj.playerX.disabled = false;
   buttonsObj.playerO.disabled = false;
+  buttonsObj.start.disabled = false;
 });
