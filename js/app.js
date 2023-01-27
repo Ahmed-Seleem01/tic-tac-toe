@@ -155,6 +155,7 @@ buttonsObj.start.addEventListener("click", () => {
   Game.playGame();
   buttonsObj.playerX.disabled = true;
   buttonsObj.playerO.disabled = true;
+  buttonsObj.start.disabled = true;
 });
 
 // Reset the game when the button restart is clicked
